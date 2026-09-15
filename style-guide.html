@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hufflin's Plumbing - Style Guide (Phase 3)</title>
+  <meta name="robots" content="noindex,nofollow" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            cream: '#F8F4EC',
+            white: '#FFFFFF',
+            forest: '#14352A',
+            moss: '#5C6B63',
+            linen: '#E5DFD4',
+            pine: '#1F5C45',
+            go: '#0F766E',
+            'go-dark': '#0B5F59',
+            leaf: '#3F7D4E',
+          },
+          fontFamily: {
+            display: ['"Fraunces"', 'Georgia', 'serif'],
+            body: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      background-color: #F8F4EC;
+      color: #14352A;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Fraunces", Georgia, serif;
+      text-wrap: balance;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(8px);
+      animation: fadeUp 0.45s ease forwards;
+    }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .btn-call {
+      background-color: #0F766E;
+      color: #fff;
+      transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .btn-call:hover {
+      background-color: #0B5F59;
+      box-shadow: 0 4px 12px rgba(15, 118, 110, 0.35);
+    }
+    .btn-call:active { transform: scale(0.98); }
+    .btn-call:focus-visible {
+      outline: 2px solid #0B5F59;
+      outline-offset: 2px;
+    }
+    .btn-text {
+      background-color: transparent;
+      color: #0F766E;
+      border: 1.5px solid #0F766E;
+      transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .btn-text:hover {
+      background-color: #0F766E;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(15, 118, 110, 0.25);
+    }
+    .btn-text:active { transform: scale(0.98); }
+    .btn-text:focus-visible {
+      outline: 2px solid #0B5F59;
+      outline-offset: 2px;
+    }
+    .btn-ghost {
+      background-color: transparent;
+      color: #14352A;
+      border: 1.5px solid #E5DFD4;
+      transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    }
+    .btn-ghost:hover {
+      border-color: #1F5C45;
+      background-color: #fff;
+      color: #1F5C45;
+    }
+    .btn-ghost:focus-visible {
+      outline: 2px solid #1F5C45;
+      outline-offset: 2px;
+    }
+    .btn-pine {
+      background-color: #1F5C45;
+      color: #fff;
+      transition: background-color 0.2s ease;
+    }
+    .btn-pine:hover { background-color: #174A37; }
+    .field {
+      border: 1.5px solid #E5DFD4;
+      background: #fff;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .field:focus {
+      outline: none;
+      border-color: #1F5C45;
+      box-shadow: 0 0 0 3px rgba(31, 92, 69, 0.15);
+    }
+    .swatch {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .swatch:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(20, 53, 42, 0.08);
+    }
+    .card-demo {
+      transition: box-shadow 0.25s ease, transform 0.2s ease;
+    }
+    .card-demo:hover {
+      box-shadow: 0 8px 24px rgba(20, 53, 42, 0.08);
+      transform: translateY(-2px);
+    }
+    .sticky-demo {
+      min-height: 48px;
+    }
+  </style>
+</head>
+<body class="bg-cream text-forest antialiased">
+
+  <!-- Melton sample ribbon -->
+  <div class="bg-pine text-white text-center text-xs sm:text-sm font-body font-semibold tracking-wide py-2 px-4">
+    SAMPLE · Melton Launch · Hufflin's Plumbing · Phase 3 style guide · Not live production
+  </div>
+
+  <!-- 1. Header with dials -->
+  <header class="border-b border-linen bg-white">
+    <div class="max-w-5xl mx-auto px-5 py-10 sm:py-12 fade-in">
+      <p class="text-sm font-semibold uppercase tracking-wider text-pine mb-3">Hufflin's Plumbing</p>
+      <h1 class="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-forest leading-tight mb-4">
+        Style guide
+      </h1>
+      <p class="text-moss text-base sm:text-lg max-w-2xl mb-8 leading-relaxed">
+        Family shop warmth. Cream canvas, forest ink, teal Call and Text.
+        Locked strategy: <strong class="text-forest">A+B hybrid Family Call/Text</strong> (Joseph/family + Call/text-first), photo-supported, Greenville.
+        CSS hover and fade only. No GSAP.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+        <div class="rounded-lg border border-linen bg-cream p-4">
+          <p class="text-xs uppercase tracking-wider text-moss mb-1">DESIGN_VARIANCE</p>
+          <p class="font-display text-3xl font-bold text-forest">5</p>
+          <p class="text-sm text-moss mt-2 leading-snug">Neighborly craft with Joseph/family character. More human than utility HVAC, still familiar plumber conventions.</p>
+        </div>
+        <div class="rounded-lg border border-linen bg-cream p-4">
+          <p class="text-xs uppercase tracking-wider text-moss mb-1">MOTION_INTENSITY</p>
+          <p class="font-display text-3xl font-bold text-forest">3</p>
+          <p class="text-sm text-moss mt-2 leading-snug">Subtle fade and strong hover on Call/Text only. Motion never competes with dual CTAs.</p>
+        </div>
+        <div class="rounded-lg border border-linen bg-cream p-4">
+          <p class="text-xs uppercase tracking-wider text-moss mb-1">VISUAL_DENSITY</p>
+          <p class="font-display text-3xl font-bold text-forest">5</p>
+          <p class="text-sm text-moss mt-2 leading-snug">Standard local-operator rhythm. Room for family story and gallery without burying Call/Text.</p>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="max-w-5xl mx-auto px-5 py-12 space-y-16">
+
+    <!-- 2. Color swatches -->
+    <section class="fade-in" style="animation-delay: 0.05s">
+      <h2 class="text-2xl sm:text-3xl font-display font-bold mb-2">Color</h2>
+      <p class="text-moss mb-6 max-w-2xl">Cream + forest reads family plumber. Teal Call/Text beats SERP blue and amber competitors. Pine structure keeps craft feel without franchise chrome.</p>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
+        <div class="swatch rounded-lg border border-linen overflow-hidden bg-white">
+          <div class="h-20" style="background:#F8F4EC"></div>
+          <div class="p-3">
+            <p class="font-display font-semibold text-sm">cream</p>
+            <p class="font-mono text-xs text-moss mt-0.5">#F8F4EC</p>
+            <p class="text-xs text-moss mt-1">Page canvas</p>
+          </div>
+        </div>
+        <div class="swatch rounded-lg border border-linen overflow-hidden bg-white">
+          <div class="h-20 bg-white border-b border-linen"></div>
+          <div class="p-3">
+            <p class="font-display font-semibold text-sm">white</p>
+            <p class="font-mono text-xs text-moss mt-0.5">#FFFFFF</p>
+            <p class="text-xs text-moss mt-1">Cards, forms, surfaces</p>
+          </div>
+        </div>
+        <div class="swatch rounded-lg border border-linen overflow-hidden bg-white">
+          <div class="h-20" style="background:#14352A"></div>
+          <div class="p-3">
+            <p class="font-display font-semibold text-sm">forest</p>
+            <p class="font-mono text-xs text-moss mt-0.5">#14352A</p>
+            <p class="text-xs text-moss mt-1">Headlines, body ink</p>
+          </div>
+        </div>
+        <div class="swatch rounded-lg border border-linen overflow-hidden bg-white">
+          <div class="h-20" style="background:#5C6B63"></div>
+          <div class="p-3">
+            <p class="font-display font-semibold text-sm">moss</p>
+            <p class="font-mono text-xs text-moss mt-0.5">#5C6B63</p>
+            <p class="text-xs text-moss mt-1">Secondary text</p>
+          </div>
+        </div>
+        <div class="swatch rounded-lg border border-linen overflow-hidden bg-white">
+          <div class="h-20" style="background:#E5DFD4"></div>
+          <div class="p-3">
+            <p class="font-display font-semibold text-sm">linen</p>
+            <p class="font-mono text-xs text-moss mt-0.5">#E5DFD4</p>
+            <p class="text-xs text-moss mt-1">Borders, dividers</p>
+          </div>
+        </div>
+        <div class="swatch rounded-lg border border-linen overflow-hidden bg-white">
+          <div class="h-20" style="background:#1F5C45"></div>
+          <div class="p-3">
+            <p class="font-display font-semibold text-sm">pine</p>
+            <p class="font-mono text-xs text-moss mt-0.5">#1F5C45</p>
+            <p class="text-xs text-moss mt-1">Nav accents, icons, trust chrome</p>
+          </div>
+        </div>
+        <div class="swatch rounded-lg border border-linen overflow-hidden bg-white">
+          <div class="h-20" style="background:#0F766E"></div>
+          <div class="p-3">
+            <p class="font-display font-semibold text-sm">go</p>
+            <p class="font-mono text-xs text-moss mt-0.5">#0F766E</p>
+            <p class="text-xs text-moss mt-1">Call CTA + Text twin</p>
+          </div>
+        </div>
+        <div class="swatch rounded-lg border border-linen overflow-hidden bg-white">
+          <div class="h-20" style="background:#0B5F59"></div>
+          <div class="p-3">
+            <p class="font-display font-semibold text-sm">go-dark</p>
+            <p class="font-mono text-xs text-moss mt-0.5">#0B5F59</p>
+            <p class="text-xs text-moss mt-1">Call/Text hover active</p>
+          </div>
+        </div>
+        <div class="swatch rounded-lg border border-linen overflow-hidden bg-white">
+          <div class="h-20" style="background:#3F7D4E"></div>
+          <div class="p-3">
+            <p class="font-display font-semibold text-sm">leaf</p>
+            <p class="font-mono text-xs text-moss mt-0.5">#3F7D4E</p>
+            <p class="text-xs text-moss mt-1">Satisfaction guarantee badge only</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Typography scale -->
+    <section class="fade-in" style="animation-delay: 0.1s">
+      <h2 class="text-2xl sm:text-3xl font-display font-bold mb-2">Typography</h2>
+      <p class="text-moss mb-6 max-w-2xl">Fraunces for display (human, neighborly). Source Sans 3 for body and UI. Clearly not IBM Plex Sans. Headings use text-wrap: balance.</p>
+      <div class="rounded-xl border border-linen bg-white p-6 sm:p-8 space-y-6">
+        <div>
+          <p class="text-xs uppercase tracking-wider text-moss mb-2">H1 · Fraunces 700 · text-4xl / text-5xl</p>
+          <h1 class="text-4xl sm:text-5xl font-display font-bold leading-tight">Leak or clog? Call or text Joseph.</h1>
+        </div>
+        <div class="border-t border-linen pt-6">
+          <p class="text-xs uppercase tracking-wider text-moss mb-2">H2 · Fraunces 700 · text-2xl / text-3xl</p>
+          <h2 class="text-2xl sm:text-3xl font-display font-bold leading-tight">Family plumbing for Greenville homes</h2>
+        </div>
+        <div class="border-t border-linen pt-6">
+          <p class="text-xs uppercase tracking-wider text-moss mb-2">H3 · Fraunces 600 · text-xl</p>
+          <h3 class="text-xl font-display font-semibold leading-snug">Home plumbing · Office · Free estimate</h3>
+        </div>
+        <div class="border-t border-linen pt-6">
+          <p class="text-xs uppercase tracking-wider text-moss mb-2">Body · Source Sans 3 400 · text-base</p>
+          <p class="text-base text-forest leading-relaxed max-w-prose">
+            Neighborly local plumber. Clear Call and Text paths when something is wrong now, and a free estimate form when you are planning ahead.
+          </p>
+        </div>
+        <div class="border-t border-linen pt-6">
+          <p class="text-xs uppercase tracking-wider text-moss mb-2">Muted · Source Sans 3 · text-sm</p>
+          <p class="text-sm text-moss leading-relaxed">Serving Greenville, SC and nearby communities. SAMPLE placeholders labeled when used.</p>
+        </div>
+        <div class="border-t border-linen pt-6">
+          <p class="text-xs uppercase tracking-wider text-moss mb-2">Phone digits · tabular / system</p>
+          <p class="font-display font-semibold text-lg tracking-wide tabular-nums">(864) 319-5305</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Spacing examples -->
+    <section class="fade-in" style="animation-delay: 0.12s">
+      <h2 class="text-2xl sm:text-3xl font-display font-bold mb-2">Spacing</h2>
+      <p class="text-moss mb-6 max-w-2xl">Density dial 5: standard local-operator rhythm. One idea per band. Comfortable card padding without luxury whitespace.</p>
+      <div class="rounded-xl border border-linen bg-white p-6 sm:p-8 space-y-5">
+        <div class="flex items-center gap-4">
+          <span class="w-16 text-xs font-mono text-moss shrink-0">4 / 8px</span>
+          <div class="h-2 rounded bg-pine/20" style="width:8px"></div>
+          <span class="text-xs text-moss">Tight icon gaps</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="w-16 text-xs font-mono text-moss shrink-0">16px</span>
+          <div class="h-2 rounded bg-pine/30" style="width:16px"></div>
+          <span class="text-xs text-moss">Inline control spacing</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="w-16 text-xs font-mono text-moss shrink-0">24px</span>
+          <div class="h-2 rounded bg-pine/40" style="width:24px"></div>
+          <span class="text-xs text-moss">Card internal padding (p-6)</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="w-16 text-xs font-mono text-moss shrink-0">32px</span>
+          <div class="h-2 rounded bg-pine/50" style="width:32px"></div>
+          <span class="text-xs text-moss">Card grid gap</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="w-16 text-xs font-mono text-moss shrink-0">48px</span>
+          <div class="h-2 rounded bg-pine/60" style="width:48px"></div>
+          <span class="text-xs text-moss">Section stack (space-y-12)</span>
+        </div>
+        <div class="flex items-center gap-4">
+          <span class="w-16 text-xs font-mono text-moss shrink-0">64px</span>
+          <div class="h-2 rounded bg-pine/80" style="width:64px"></div>
+          <span class="text-xs text-moss">Major section bands (py-16)</span>
+        </div>
+        <div class="mt-4 rounded-lg border border-dashed border-linen bg-cream p-6">
+          <p class="text-sm text-moss mb-3">Example card padding (p-6 = 24px)</p>
+          <div class="bg-white border border-linen rounded-lg p-6">
+            <p class="font-display font-semibold">Service card content</p>
+            <p class="text-sm text-moss mt-1">Short title + two-line body max.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. Buttons -->
+    <section class="fade-in" style="animation-delay: 0.14s">
+      <h2 class="text-2xl sm:text-3xl font-display font-bold mb-2">Buttons</h2>
+      <p class="text-moss mb-6 max-w-2xl">Call and Text share equal visual weight (solid + outline twin on cream). Free estimate is ghost. Never Call-only.</p>
+      <div class="rounded-xl border border-linen bg-white p-6 sm:p-8">
+        <div class="flex flex-wrap items-center gap-4 mb-8">
+          <a href="tel:+18643195305" class="btn-call inline-flex items-center gap-2 rounded-lg px-5 py-3 text-base font-semibold min-h-[44px]">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            Call (864) 319-5305
+          </a>
+          <a href="sms:+18643195305" class="btn-text inline-flex items-center gap-2 rounded-lg px-5 py-3 text-base font-semibold min-h-[44px]">
+            <i data-lucide="message-square" class="w-4 h-4"></i>
+            Text us
+          </a>
+          <a href="#estimate" class="btn-ghost inline-flex items-center gap-2 rounded-lg px-5 py-3 text-base font-semibold min-h-[44px]">
+            Free estimate
+          </a>
+        </div>
+        <div class="grid sm:grid-cols-3 gap-6 text-sm">
+          <div class="rounded-lg bg-cream border border-linen p-4">
+            <p class="font-display font-semibold mb-2">Call (go solid)</p>
+            <ul class="space-y-1 text-moss">
+              <li>Default: #0F766E fill, white text</li>
+              <li>Hover: #0B5F59 + soft teal shadow</li>
+              <li>Active: slight scale down</li>
+              <li>Focus: go-dark ring</li>
+              <li>Min tap height: 44px</li>
+            </ul>
+          </div>
+          <div class="rounded-lg bg-cream border border-linen p-4">
+            <p class="font-display font-semibold mb-2">Text (go outline twin)</p>
+            <ul class="space-y-1 text-moss">
+              <li>Default: outline #0F766E on cream</li>
+              <li>Hover: solid go fill</li>
+              <li>Equal weight to Call</li>
+              <li>On dark bands: solid twin</li>
+            </ul>
+          </div>
+          <div class="rounded-lg bg-cream border border-linen p-4">
+            <p class="font-display font-semibold mb-2">Secondary (ghost)</p>
+            <ul class="space-y-1 text-moss">
+              <li>Default: transparent + linen border</li>
+              <li>Hover: pine border + white fill</li>
+              <li>Use for Free estimate only</li>
+              <li>Never replace sticky Call/Text</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. Sticky dual Call + Text bar -->
+    <section class="fade-in" style="animation-delay: 0.16s">
+      <h2 class="text-2xl sm:text-3xl font-display font-bold mb-2">Sticky Call + Text bar</h2>
+      <p class="text-moss mb-6 max-w-2xl">Dual actions, equal weight. Call: tel:+18643195305 · Call (864) 319-5305. Text: sms:+18643195305 · Text us. Never Call-only.</p>
+      <div class="rounded-xl border border-linen bg-white overflow-hidden">
+        <div class="bg-cream px-4 py-8 text-center text-sm text-moss border-b border-linen">
+          Page content sits above. Bar pins to bottom on live pages.
+        </div>
+        <div class="sticky-demo grid grid-cols-2">
+          <a href="tel:+18643195305" class="btn-call flex items-center justify-center gap-2 w-full px-4 py-3.5 text-base sm:text-lg font-semibold font-display tracking-wide border-r border-white/20">
+            <i data-lucide="phone" class="w-5 h-5"></i>
+            Call (864) 319-5305
+          </a>
+          <a href="sms:+18643195305" class="btn-call flex items-center justify-center gap-2 w-full px-4 py-3.5 text-base sm:text-lg font-semibold font-display tracking-wide">
+            <i data-lucide="message-square" class="w-5 h-5"></i>
+            Text us
+          </a>
+        </div>
+      </div>
+      <p class="text-xs text-moss mt-3">Href Call: tel:+18643195305 · Href Text: sms:+18643195305 · Mid-page bands use the same go fill pair.</p>
+    </section>
+
+    <!-- 7. Guarantee badge -->
+    <section class="fade-in" style="animation-delay: 0.17s">
+      <h2 class="text-2xl sm:text-3xl font-display font-bold mb-2">Guarantee badge</h2>
+      <p class="text-moss mb-6 max-w-2xl">Leaf accent for Satisfaction guarantee wording from the public site only. Not used for CTAs.</p>
+      <div class="rounded-xl border border-linen bg-white p-6 sm:p-8">
+        <div class="inline-flex items-center gap-2 rounded-full border border-leaf/40 bg-leaf/10 px-4 py-2">
+          <i data-lucide="badge-check" class="w-5 h-5 text-leaf"></i>
+          <span class="font-display font-semibold text-sm text-leaf">Satisfaction guarantee</span>
+        </div>
+        <p class="text-sm text-moss mt-4 max-w-md">Leaf #3F7D4E reserved for this badge. Do not use leaf for Call/Text or nav chrome.</p>
+      </div>
+    </section>
+
+    <!-- 8. Form fields -->
+    <section id="estimate" class="fade-in" style="animation-delay: 0.18s">
+      <h2 class="text-2xl sm:text-3xl font-display font-bold mb-2">Form fields</h2>
+      <p class="text-moss mb-6 max-w-2xl">Estimate form pattern. Secondary to Call/Text. Pine focus ring. Success uses leaf accent sparingly.</p>
+      <div class="rounded-xl border border-linen bg-white p-6 sm:p-8 max-w-lg">
+        <h3 class="font-display font-semibold text-xl mb-1">Request a free estimate</h3>
+        <p class="text-sm text-moss mb-6">Home or office plumbing. We will call or text you back.</p>
+        <form class="space-y-4" onsubmit="return false;">
+          <div>
+            <label class="block text-sm font-semibold mb-1.5" for="name">Name</label>
+            <input id="name" type="text" class="field w-full rounded-lg px-3 py-2.5 text-base" placeholder="Your name" autocomplete="name" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1.5" for="phone">Phone</label>
+            <input id="phone" type="tel" class="field w-full rounded-lg px-3 py-2.5 text-base" placeholder="(864) 555-0100" autocomplete="tel" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1.5" for="email">Email</label>
+            <input id="email" type="email" class="field w-full rounded-lg px-3 py-2.5 text-base" placeholder="you@example.com" autocomplete="email" />
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1.5" for="service">Service needed</label>
+            <select id="service" class="field w-full rounded-lg px-3 py-2.5 text-base">
+              <option>Home plumbing</option>
+              <option>Office plumbing</option>
+              <option>Free estimate / not sure</option>
+            </select>
+          </div>
+          <div>
+            <label class="block text-sm font-semibold mb-1.5" for="notes">Notes (optional)</label>
+            <textarea id="notes" rows="3" class="field w-full rounded-lg px-3 py-2.5 text-base resize-y" placeholder="Leak, clog, fixture, preferred time"></textarea>
+          </div>
+          <button type="submit" class="btn-call w-full rounded-lg px-5 py-3 text-base font-semibold min-h-[44px]">
+            Send estimate request
+          </button>
+          <p class="text-xs text-moss text-center">Prefer to talk now? <a href="tel:+18643195305" class="text-go font-semibold hover:text-go-dark underline-offset-2 hover:underline">Call (864) 319-5305</a> or <a href="sms:+18643195305" class="text-go font-semibold hover:text-go-dark underline-offset-2 hover:underline">Text us</a></p>
+        </form>
+        <div class="mt-6 rounded-lg border border-leaf/30 bg-leaf/5 p-3 flex items-start gap-2">
+          <i data-lucide="check-circle" class="w-5 h-5 text-leaf shrink-0 mt-0.5"></i>
+          <p class="text-sm text-leaf font-medium">Success state sample: Thanks. We got your request and will call or text soon.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 9. Cards / service tiles -->
+    <section class="fade-in" style="animation-delay: 0.2s">
+      <h2 class="text-2xl sm:text-3xl font-display font-bold mb-2">Service tiles</h2>
+      <p class="text-moss mb-6 max-w-2xl">Home plumbing, office, free estimate. No invented specialty SKUs. Dual CTAs on urgent paths.</p>
+      <div class="grid md:grid-cols-3 gap-5">
+        <article class="card-demo rounded-xl border border-linen bg-white p-6 flex flex-col">
+          <div class="w-10 h-10 rounded-lg bg-go/10 text-go flex items-center justify-center mb-4">
+            <i data-lucide="home" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-display font-semibold text-lg mb-2">Home plumbing</h3>
+          <p class="text-sm text-moss leading-relaxed mb-5 flex-1">Leaks, clogs, fixtures, and everyday home plumbing. Call or text when something is wrong now.</p>
+          <div class="flex flex-col gap-2">
+            <a href="tel:+18643195305" class="btn-call inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold min-h-[44px] w-full">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+              Call now
+            </a>
+            <a href="sms:+18643195305" class="btn-text inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold min-h-[44px] w-full">
+              <i data-lucide="message-square" class="w-4 h-4"></i>
+              Text us
+            </a>
+          </div>
+          <p class="text-[11px] uppercase tracking-wider text-moss mt-3 text-center">Call/Text-biased path</p>
+        </article>
+
+        <article class="card-demo rounded-xl border border-linen bg-white p-6 flex flex-col">
+          <div class="w-10 h-10 rounded-lg bg-pine/10 text-pine flex items-center justify-center mb-4">
+            <i data-lucide="building-2" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-display font-semibold text-lg mb-2">Office plumbing</h3>
+          <p class="text-sm text-moss leading-relaxed mb-5 flex-1">Small office and light commercial plumbing help in the Greenville area. Reach out by Call or Text.</p>
+          <div class="flex flex-col gap-2">
+            <a href="tel:+18643195305" class="btn-call inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold min-h-[44px] w-full">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+              Call now
+            </a>
+            <a href="sms:+18643195305" class="btn-text inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold min-h-[44px] w-full">
+              <i data-lucide="message-square" class="w-4 h-4"></i>
+              Text us
+            </a>
+          </div>
+          <p class="text-[11px] uppercase tracking-wider text-moss mt-3 text-center">Call/Text-biased path</p>
+        </article>
+
+        <article class="card-demo rounded-xl border border-linen bg-white p-6 flex flex-col">
+          <div class="w-10 h-10 rounded-lg bg-pine/10 text-pine flex items-center justify-center mb-4">
+            <i data-lucide="clipboard-list" class="w-5 h-5"></i>
+          </div>
+          <h3 class="font-display font-semibold text-lg mb-2">Free estimate</h3>
+          <p class="text-sm text-moss leading-relaxed mb-5 flex-1">Planning a project? Request a free estimate and we will follow up with options.</p>
+          <a href="#estimate" class="btn-ghost inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold min-h-[44px] w-full">
+            Free estimate
+          </a>
+          <p class="text-[11px] uppercase tracking-wider text-moss mt-3 text-center">Form-biased path</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- 10. Mini-hero -->
+    <section class="fade-in" style="animation-delay: 0.22s">
+      <h2 class="text-2xl sm:text-3xl font-display font-bold mb-2">Mini-hero</h2>
+      <p class="text-moss mb-6 max-w-2xl">Family/Joseph line + Greenville named + dual Call/Text CTAs. Free estimate ghost secondary. Solid cream fallback with big type when assets thin.</p>
+      <div class="rounded-xl border border-linen overflow-hidden bg-white">
+        <div class="grid md:grid-cols-2">
+          <div class="p-8 sm:p-10 flex flex-col justify-center bg-cream">
+            <p class="text-xs font-semibold uppercase tracking-wider text-pine mb-3">Hufflin's Plumbing · Greenville</p>
+            <h2 class="text-3xl sm:text-4xl font-display font-bold leading-tight mb-4">
+              Family plumbing. Call or text Joseph.
+            </h2>
+            <p class="text-moss mb-6 leading-relaxed">
+              Neighborly help for Greenville homes and offices. Clear next steps. Satisfaction guarantee.
+            </p>
+            <div class="flex flex-wrap gap-3 mb-3">
+              <a href="tel:+18643195305" class="btn-call inline-flex items-center gap-2 rounded-lg px-5 py-3 text-base font-semibold min-h-[44px]">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                Call (864) 319-5305
+              </a>
+              <a href="sms:+18643195305" class="btn-text inline-flex items-center gap-2 rounded-lg px-5 py-3 text-base font-semibold min-h-[44px]">
+                <i data-lucide="message-square" class="w-4 h-4"></i>
+                Text us
+              </a>
+            </div>
+            <a href="#estimate" class="btn-ghost inline-flex items-center gap-2 rounded-lg px-5 py-3 text-base font-semibold min-h-[44px] w-fit">
+              Free estimate
+            </a>
+          </div>
+          <div class="min-h-[220px] md:min-h-full bg-pine/90 flex items-center justify-center p-8 relative">
+            <div class="absolute inset-0 opacity-20" style="background: linear-gradient(135deg, #1F5C45 0%, #14352A 100%);"></div>
+            <div class="relative text-center text-white/90 px-4">
+              <i data-lucide="image" class="w-10 h-10 mx-auto mb-3 opacity-80"></i>
+              <p class="font-display font-semibold text-sm">Photo-supported slot</p>
+              <p class="text-xs mt-1 text-white/70">Pull GoDaddy gallery / GBP when available. Warm grade OK. No fake handshake stock. Solid cream hero fallback with big type + dual CTAs if assets thin.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 11. Nav twin CTAs pattern -->
+    <section class="fade-in" style="animation-delay: 0.23s">
+      <h2 class="text-2xl sm:text-3xl font-display font-bold mb-2">Nav twin CTAs</h2>
+      <p class="text-moss mb-6 max-w-2xl">Call + Text twin CTAs in the nav. Never Call-only like Air Solutions.</p>
+      <div class="rounded-xl border border-linen bg-white overflow-hidden">
+        <div class="flex flex-wrap items-center justify-between gap-4 px-5 py-4 border-b border-linen">
+          <p class="font-display font-bold text-forest">Hufflin's Plumbing</p>
+          <div class="flex flex-wrap items-center gap-2">
+            <a href="tel:+18643195305" class="btn-call inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold min-h-[40px]">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+              Call
+            </a>
+            <a href="sms:+18643195305" class="btn-text inline-flex items-center gap-2 rounded-lg px-4 py-2 text-sm font-semibold min-h-[40px]">
+              <i data-lucide="message-square" class="w-4 h-4"></i>
+              Text
+            </a>
+          </div>
+        </div>
+        <p class="text-xs text-moss px-5 py-3 bg-cream">Desktop and mobile nav share the twin pattern. Sticky bar mirrors the same pair.</p>
+      </div>
+    </section>
+
+    <!-- 12. Footer pattern -->
+    <section class="fade-in" style="animation-delay: 0.24s">
+      <h2 class="text-2xl sm:text-3xl font-display font-bold mb-2">Footer pattern</h2>
+      <p class="text-moss mb-6 max-w-2xl">NAP, dual Call/Text, hours TBD if incomplete on DIY.</p>
+      <footer class="rounded-xl border border-linen bg-white overflow-hidden">
+        <div class="p-8 sm:p-10 grid sm:grid-cols-2 gap-8">
+          <div>
+            <p class="font-display font-bold text-lg mb-2">Hufflin's Plumbing</p>
+            <p class="text-sm text-moss leading-relaxed mb-4">
+              402 C Curtis Rd<br />
+              Greenville, SC 29611<br />
+              Hours: TBD if incomplete on DIY
+            </p>
+            <div class="flex flex-col gap-2">
+              <a href="tel:+18643195305" class="inline-flex items-center gap-2 text-go font-semibold hover:text-go-dark transition-colors">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                (864) 319-5305
+              </a>
+              <a href="sms:+18643195305" class="inline-flex items-center gap-2 text-go font-semibold hover:text-go-dark transition-colors">
+                <i data-lucide="message-square" class="w-4 h-4"></i>
+                Text us
+              </a>
+            </div>
+          </div>
+          <div class="sm:text-right">
+            <div class="inline-flex flex-wrap gap-2 sm:justify-end">
+              <a href="tel:+18643195305" class="btn-call inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold min-h-[44px]">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                Call now
+              </a>
+              <a href="sms:+18643195305" class="btn-text inline-flex items-center gap-2 rounded-lg px-5 py-3 text-sm font-semibold min-h-[44px]">
+                <i data-lucide="message-square" class="w-4 h-4"></i>
+                Text us
+              </a>
+            </div>
+            <p class="text-xs text-moss mt-4">Nav CTA and sticky bar share this go fill / outline twin.</p>
+          </div>
+        </div>
+        <div class="border-t border-linen bg-cream px-8 py-4">
+          <p class="text-xs text-moss leading-relaxed">
+            Hufflin's Plumbing is a local Greenville family plumber. SAMPLE Melton Launch style guide. Not live production.
+          </p>
+        </div>
+      </footer>
+    </section>
+
+  </main>
+
+  <div class="border-t border-linen bg-white py-6 text-center">
+    <p class="text-xs text-moss">Phase 3 · DESIGN_VARIANCE 5 · MOTION_INTENSITY 3 · VISUAL_DENSITY 5 · cream/forest/teal Call+Text · Fraunces · no GSAP</p>
+  </div>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

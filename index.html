@@ -3,478 +3,707 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hufflin’s Plumbing | Affordable Plumbing for Greenville Homes &amp; Offices</title>
-  <meta name="description" content="Hufflin’s Plumbing — professional plumbing services in South Carolina for over 10 years. Home &amp; office. Free estimates. Call or text (864) 319-5305." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <title>Hufflin's Plumbing | Greenville Family Plumber | Call or Text</title>
+  <meta name="description" content="Affordable Greenville plumbing from Joseph Hufflin's family shop. Call or text (864) 319-5305. Free estimates. Satisfaction guaranteed." />
+  <meta name="robots" content="noindex,nofollow" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            navy: { 950: '#0a1628', 900: '#0c2340', 800: '#123a66', 700: '#1a5490', 600: '#2468b0' },
-            ice: { 50: '#f0f6fb', 100: '#ddebf5', 200: '#b3d4ea' },
-            accent: { DEFAULT: '#1d6fb8', hover: '#155a96', soft: '#e8f2fa' }
+            cream: '#F8F4EC',
+            white: '#FFFFFF',
+            forest: '#14352A',
+            moss: '#5C6B63',
+            linen: '#E5DFD4',
+            pine: '#1F5C45',
+            go: '#0F766E',
+            'go-dark': '#0B5F59',
+            leaf: '#3F7D4E',
           },
           fontFamily: {
-            sans: ['"DM Sans"', 'system-ui', 'sans-serif'],
-            serif: ['"Instrument Serif"', 'Georgia', 'serif']
+            display: ['"Fraunces"', 'Georgia', 'serif'],
+            body: ['"Source Sans 3"', 'system-ui', 'sans-serif'],
           },
-          boxShadow: {
-            cta: '0 8px 30px -6px rgba(29, 111, 184, 0.45)',
-            card: '0 4px 24px -4px rgba(10, 22, 40, 0.08)'
-          }
-        }
-      }
-    }
+        },
+      },
+    };
   </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <script src="https://unpkg.com/lucide@latest"></script>
   <style>
     html { scroll-behavior: smooth; }
-    h1, h2, h3, h4 { text-wrap: balance; }
-    .sample-ribbon {
-      position: fixed; top: 12px; left: -36px; z-index: 100;
-      transform: rotate(-45deg); background: #0c2340; color: #e8f2fa;
-      font-size: 10px; font-weight: 600; letter-spacing: 0.06em;
-      text-transform: uppercase; padding: 4px 40px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2); pointer-events: none;
+    body {
+      font-family: "Source Sans 3", system-ui, sans-serif;
+      background-color: #F8F4EC;
+      color: #14352A;
+      padding-bottom: 56px;
     }
-    @media (max-width: 640px) { .sample-ribbon { display: none; } }
-    .fade-in { opacity: 0; transform: translateY(12px); transition: opacity 0.55s ease, transform 0.55s ease; }
-    .fade-in.visible { opacity: 1; transform: translateY(0); }
-    .img-lock { object-fit: cover; width: 100%; height: 100%; }
-    .hero-grid {
-      background-image:
-        linear-gradient(rgba(12, 35, 64, 0.04) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(12, 35, 64, 0.04) 1px, transparent 1px);
-      background-size: 48px 48px;
+    h1, h2, h3, h4, h5, h6 {
+      font-family: "Fraunces", Georgia, serif;
+      text-wrap: balance;
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(8px);
+      animation: fadeUp 0.45s ease forwards;
+    }
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .btn-call {
+      background-color: #0F766E;
+      color: #fff;
+      transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .btn-call:hover {
+      background-color: #0B5F59;
+      box-shadow: 0 4px 12px rgba(15, 118, 110, 0.35);
+    }
+    .btn-call:active { transform: scale(0.98); }
+    .btn-call:focus-visible {
+      outline: 2px solid #0B5F59;
+      outline-offset: 2px;
+    }
+    .btn-text {
+      background-color: transparent;
+      color: #0F766E;
+      border: 1.5px solid #0F766E;
+      transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .btn-text:hover {
+      background-color: #0F766E;
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(15, 118, 110, 0.25);
+    }
+    .btn-text:active { transform: scale(0.98); }
+    .btn-text:focus-visible {
+      outline: 2px solid #0B5F59;
+      outline-offset: 2px;
+    }
+    .btn-text-on-dark {
+      background-color: #0F766E;
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.35);
+      transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+    }
+    .btn-text-on-dark:hover {
+      background-color: #0B5F59;
+      box-shadow: 0 4px 12px rgba(15, 118, 110, 0.35);
+    }
+    .btn-text-on-dark:active { transform: scale(0.98); }
+    .btn-text-on-dark:focus-visible {
+      outline: 2px solid #fff;
+      outline-offset: 2px;
+    }
+    .btn-ghost {
+      background-color: transparent;
+      color: #14352A;
+      border: 1.5px solid #E5DFD4;
+      transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+    }
+    .btn-ghost:hover {
+      border-color: #1F5C45;
+      background-color: #fff;
+      color: #1F5C45;
+    }
+    .btn-ghost:focus-visible {
+      outline: 2px solid #1F5C45;
+      outline-offset: 2px;
+    }
+    .btn-ghost-on-dark {
+      background-color: transparent;
+      color: #fff;
+      border: 1.5px solid rgba(255,255,255,0.45);
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+    .btn-ghost-on-dark:hover {
+      border-color: #fff;
+      background-color: rgba(255,255,255,0.1);
+    }
+    .card-demo {
+      transition: box-shadow 0.25s ease, transform 0.2s ease;
+    }
+    .card-demo:hover {
+      box-shadow: 0 8px 24px rgba(20, 53, 42, 0.08);
+      transform: translateY(-2px);
+    }
+    .field {
+      border: 1.5px solid #E5DFD4;
+      background: #fff;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .field:focus {
+      outline: none;
+      border-color: #1F5C45;
+      box-shadow: 0 0 0 3px rgba(31, 92, 69, 0.15);
+    }
+    .sticky-dual {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 60;
+    }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    .sr-only:focus,
+    .focus\:not-sr-only:focus {
+      position: static;
+      width: auto;
+      height: auto;
+      margin: 0;
+      overflow: visible;
+      clip: auto;
+      white-space: normal;
     }
   </style>
 </head>
-<body class="font-sans text-navy-900 bg-white antialiased">
-  <div class="sample-ribbon" aria-hidden="true">Melton Studios Sample</div>
+<body class="bg-cream text-forest antialiased">
 
-  <!-- Sticky urgency bar -->
-  <div class="bg-navy-900 text-white">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-2 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-sm">
-      <p class="font-medium text-center sm:text-left text-white/90">Plumbing problem in Greenville? Call or text Hufflin’s — free estimates.</p>
+  <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:px-3 focus:py-2 focus:text-sm focus:underline">Skip to content</a>
+
+  <!-- Melton SAMPLE ribbon -->
+  <div class="bg-pine text-white text-center text-xs sm:text-sm font-body font-semibold tracking-wide py-2 px-4">
+    SAMPLE · Melton Launch · Hufflin's Plumbing · Phase 4 homepage · Not live production
+  </div>
+
+  <!-- Top helper bar (dual Call + Text) -->
+  <div class="bg-go text-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-2.5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 text-sm">
+      <p class="font-medium text-center sm:text-left">Plumbing problem in Greenville? Call or text Hufflin's.</p>
       <div class="flex items-center justify-center gap-3 shrink-0">
-        <a href="tel:+18643195305" class="inline-flex items-center gap-1.5 font-semibold text-sky-300 hover:text-sky-200 transition-colors">
-          <i data-lucide="phone" style="width:14px;height:14px;"></i>
+        <a href="tel:+18643195305" class="inline-flex items-center gap-1.5 font-semibold hover:underline underline-offset-2">
+          <i data-lucide="phone" class="w-4 h-4"></i>
           Call (864) 319-5305
         </a>
-        <span class="text-white/30 hidden sm:inline">|</span>
-        <a href="sms:+18643195305" class="font-semibold text-white/80 hover:text-white transition-colors hidden sm:inline">Text for a Free Estimate</a>
+        <span class="text-white/50" aria-hidden="true">|</span>
+        <a href="sms:+18643195305" class="inline-flex items-center gap-1.5 font-semibold hover:underline underline-offset-2">
+          <i data-lucide="message-square" class="w-4 h-4"></i>
+          Text us
+        </a>
       </div>
     </div>
   </div>
 
-  <!-- Sticky Nav -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-ice-100">
+  <!-- Sticky nav -->
+  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-linen">
     <div class="max-w-6xl mx-auto px-4 sm:px-6">
       <div class="flex items-center justify-between h-16 sm:h-[4.25rem]">
-        <a href="#top" class="flex items-center gap-2.5 group">
-          <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-navy-900 text-sky-300">
-            <i data-lucide="wrench" style="width:18px;height:18px;"></i>
-          </span>
-          <span class="leading-tight">
-            <span class="block text-sm font-bold tracking-tight text-navy-900 group-hover:text-navy-700 transition-colors">Hufflin’s Plumbing</span>
-            <span class="block text-[11px] text-navy-700/60 font-medium">Greenville, SC</span>
+        <a href="index.html" class="flex items-center gap-2.5 group min-w-0">
+          <div class="h-10 w-10 rounded-lg bg-pine/10 text-pine flex items-center justify-center shrink-0">
+            <i data-lucide="wrench" class="w-5 h-5"></i>
+          </div>
+          <span class="leading-tight min-w-0">
+            <span class="block text-sm font-display font-bold tracking-tight text-forest group-hover:text-pine transition-colors">Hufflin's Plumbing</span>
+            <span class="block text-[11px] text-moss font-medium">Greenville, SC</span>
           </span>
         </a>
-        <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-navy-700/80">
-          <a href="#services" class="hover:text-navy-900 transition-colors">Services</a>
-          <a href="#why-us" class="hover:text-navy-900 transition-colors">Why Us</a>
-          <a href="#quote" class="hover:text-navy-900 transition-colors">Free Estimate</a>
+
+        <nav class="hidden lg:flex items-center gap-6 text-sm font-medium text-moss" aria-label="Primary">
+          <div class="relative group">
+            <button type="button" class="inline-flex items-center gap-1 hover:text-forest transition-colors" aria-expanded="false" aria-haspopup="true">
+              Services
+              <i data-lucide="chevron-down" class="w-3.5 h-3.5"></i>
+            </button>
+            <div class="invisible opacity-0 group-hover:visible group-hover:opacity-100 transition-opacity absolute left-0 top-full pt-2 z-50">
+              <div class="bg-white border border-linen rounded-lg shadow-lg py-2 min-w-[220px]">
+                <a href="drain-cleaning.html" class="block px-4 py-2 text-sm text-forest hover:bg-cream">Drain Cleaning</a>
+                <a href="water-heaters.html" class="block px-4 py-2 text-sm text-forest hover:bg-cream">Water Heaters</a>
+                <a href="leak-repair.html" class="block px-4 py-2 text-sm text-forest hover:bg-cream">Leak Repair</a>
+                <a href="plumbing-services.html" class="block px-4 py-2 text-sm text-forest hover:bg-cream">Home &amp; Office Plumbing</a>
+              </div>
+            </div>
+          </div>
+          <a href="about.html" class="hover:text-forest transition-colors">About</a>
+          <a href="service-area.html" class="hover:text-forest transition-colors">Service Area</a>
+          <a href="contact.html" class="hover:text-forest transition-colors">Contact</a>
         </nav>
-        <a href="tel:+18643195305"
-           class="inline-flex items-center gap-2 rounded-full bg-accent hover:bg-accent-hover text-white text-sm font-semibold px-4 py-2.5 shadow-cta transition-colors">
-          <i data-lucide="phone" style="width:16px;height:16px;"></i>
-          <span class="hidden sm:inline">(864) 319-5305</span>
-          <span class="sm:hidden">Call Now</span>
-        </a>
+
+        <div class="flex items-center gap-2">
+          <a href="tel:+18643195305" class="btn-call inline-flex items-center gap-1.5 rounded-lg px-3 sm:px-4 py-2 text-sm font-semibold min-h-[40px]">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            <span class="hidden sm:inline">Call</span>
+          </a>
+          <a href="sms:+18643195305" class="btn-text inline-flex items-center gap-1.5 rounded-lg px-3 sm:px-4 py-2 text-sm font-semibold min-h-[40px]">
+            <i data-lucide="message-square" class="w-4 h-4"></i>
+            <span class="hidden sm:inline">Text</span>
+          </a>
+          <button type="button" id="mobile-menu-btn" class="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg border border-linen text-forest" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+
+      <div id="mobile-menu" class="hidden lg:hidden border-t border-linen py-3 space-y-1" hidden>
+        <a href="drain-cleaning.html" class="block px-2 py-2.5 text-sm font-medium text-forest rounded-lg hover:bg-cream">Drain Cleaning</a>
+        <a href="water-heaters.html" class="block px-2 py-2.5 text-sm font-medium text-forest rounded-lg hover:bg-cream">Water Heaters</a>
+        <a href="leak-repair.html" class="block px-2 py-2.5 text-sm font-medium text-forest rounded-lg hover:bg-cream">Leak Repair</a>
+        <a href="plumbing-services.html" class="block px-2 py-2.5 text-sm font-medium text-forest rounded-lg hover:bg-cream">Home &amp; Office Plumbing</a>
+        <a href="about.html" class="block px-2 py-2.5 text-sm font-medium text-forest rounded-lg hover:bg-cream">About</a>
+        <a href="service-area.html" class="block px-2 py-2.5 text-sm font-medium text-forest rounded-lg hover:bg-cream">Service Area</a>
+        <a href="contact.html" class="block px-2 py-2.5 text-sm font-medium text-forest rounded-lg hover:bg-cream">Contact</a>
+        <a href="#estimate" class="block px-2 py-2.5 text-sm font-medium text-go rounded-lg hover:bg-cream">Request a Free Estimate</a>
       </div>
     </div>
   </header>
 
-  <main id="top">
+  <main id="main">
+
     <!-- Hero -->
-    <section class="relative overflow-hidden bg-ice-50 hero-grid">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-20 lg:py-24">
-        <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
-          <div class="lg:col-span-6 fade-in">
-            <p class="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-navy-700/70 mb-4">
-              <span class="w-1.5 h-1.5 rounded-full bg-accent"></span>
-              Home &amp; Office Plumbing
-            </p>
-            <h1 class="text-3xl sm:text-4xl lg:text-[2.75rem] font-bold tracking-tight text-navy-900 leading-[1.12] mb-5">
-              Affordable plumbing for Greenville homes and offices
+    <section class="border-b border-linen bg-cream fade-in">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-16 lg:py-20">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center">
+          <div>
+            <p class="text-xs sm:text-sm font-semibold uppercase tracking-wider text-pine mb-3">Greenville family plumbing</p>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-display font-bold text-forest leading-tight mb-4">
+              Leak, clog, or water heater trouble? Call or text Joseph.
             </h1>
-            <p class="text-lg text-navy-700/75 leading-relaxed max-w-lg mb-8">
-              Hufflin’s Plumbing — professional plumbing services in South Carolina for over 10 years. Satisfaction-backed work. Call or text today for a free estimate.
+            <p class="text-base sm:text-lg text-moss leading-relaxed mb-6 max-w-xl">
+              Hufflin's Plumbing. Family shop passed down by Joseph's grandfather. Over 10 years serving Greenville homes and offices. Affordable work. Satisfaction guaranteed. Free estimates.
             </p>
-            <div class="flex flex-col sm:flex-row gap-3">
-              <a href="tel:+18643195305"
-                 class="inline-flex items-center justify-center gap-2 rounded-full bg-accent hover:bg-accent-hover text-white font-semibold px-6 py-3.5 shadow-cta transition-all hover:scale-[1.02]">
-                <i data-lucide="phone" style="width:18px;height:18px;"></i>
+            <div class="flex flex-wrap gap-3 mb-3">
+              <a href="tel:+18643195305" class="btn-call inline-flex items-center gap-2 rounded-lg px-5 py-3 text-base font-semibold min-h-[44px]">
+                <i data-lucide="phone" class="w-4 h-4"></i>
                 Call (864) 319-5305
               </a>
-              <a href="sms:+18643195305"
-                 class="inline-flex items-center justify-center gap-2 rounded-full bg-white border border-navy-900/10 hover:border-navy-900/25 text-navy-900 font-semibold px-6 py-3.5 shadow-sm transition-all hover:scale-[1.02]">
-                Text for a Free Estimate
-                <i data-lucide="message-square" style="width:18px;height:18px;"></i>
+              <a href="sms:+18643195305" class="btn-text inline-flex items-center gap-2 rounded-lg px-5 py-3 text-base font-semibold min-h-[44px]">
+                <i data-lucide="message-square" class="w-4 h-4"></i>
+                Text us
               </a>
             </div>
-            <p class="mt-6 text-sm text-navy-700/55 font-medium">
-              Home &amp; office · Greenville, SC · Free estimates
-            </p>
+            <a href="#estimate" class="btn-ghost inline-flex items-center gap-2 rounded-lg px-5 py-3 text-base font-semibold min-h-[44px] w-fit mb-4">
+              Request a Free Estimate
+            </a>
+            <p class="text-sm text-moss">Call or text for urgent jobs · Free estimate when you're planning ahead</p>
           </div>
-          <div class="lg:col-span-6 fade-in" style="transition-delay: 80ms;">
-            <div class="relative">
-              <div class="aspect-[4/3] rounded-2xl overflow-hidden shadow-card ring-1 ring-navy-900/5">
-                <img
-                  src="https://images.unsplash.com/photo-1607472586893-edb57bdc0e39?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"
-                  alt="Plumbing pipes and fixtures in a residential setting"
-                  class="img-lock"
-                  width="1200"
-                  height="900"
-                  loading="eager"
-                />
-              </div>
-              <div class="absolute -bottom-4 -left-2 sm:left-4 sm:-bottom-5 bg-white rounded-xl shadow-card ring-1 ring-navy-900/5 px-4 py-3 flex items-center gap-3 max-w-[240px]">
-                <span class="flex items-center justify-center w-10 h-10 rounded-lg bg-accent-soft text-accent">
-                  <i data-lucide="shield-check" style="width:20px;height:20px;"></i>
-                </span>
-                <span class="text-sm leading-snug">
-                  <span class="block font-semibold text-navy-900">10+ years</span>
-                  <span class="text-navy-700/60">serving South Carolina</span>
-                </span>
-              </div>
-            </div>
+          <div class="min-h-[260px] sm:min-h-[320px] rounded-xl overflow-hidden relative bg-pine">
+            <img src="assets/DjJKp45.jpg" alt="Clean residential plumbing fixture with running water" class="absolute inset-0 w-full h-full object-cover" width="800" height="600" />
+            <div class="absolute inset-0 bg-gradient-to-t from-forest/50 to-transparent"></div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Trust strip (facts) -->
-    <section class="border-y border-ice-100 bg-white" aria-label="Trust highlights">
-      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-5">
-        <ul class="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
-          <li class="flex items-center gap-3 text-sm font-medium text-navy-800">
-            <i data-lucide="calendar" class="text-accent shrink-0" style="width:18px;height:18px;"></i>
-            Over 10 years in SC
-          </li>
-          <li class="flex items-center gap-3 text-sm font-medium text-navy-800">
-            <i data-lucide="home" class="text-accent shrink-0" style="width:18px;height:18px;"></i>
-            Home or office plumbing
-          </li>
-          <li class="flex items-center gap-3 text-sm font-medium text-navy-800">
-            <i data-lucide="map-pin" class="text-accent shrink-0" style="width:18px;height:18px;"></i>
-            Greenville, SC
-          </li>
-          <li class="flex items-center gap-3 text-sm font-medium text-navy-800">
-            <i data-lucide="clipboard-check" class="text-accent shrink-0" style="width:18px;height:18px;"></i>
-            Free estimates
-          </li>
-        </ul>
+    <!-- Urgency band -->
+    <section class="bg-pine text-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
+        <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6">
+          <div class="max-w-2xl">
+            <h2 class="text-2xl sm:text-3xl font-display font-bold leading-tight mb-3">Something wrong with the plumbing? Reach a real local shop.</h2>
+            <p class="text-white/85 leading-relaxed">We stay in communication until the job is done. Call or text with what's going on. We'll quote a free estimate when you need one.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 shrink-0">
+            <a href="tel:+18643195305" class="btn-call inline-flex items-center gap-2 rounded-lg px-5 py-3 text-base font-semibold min-h-[44px]">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+              Call (864) 319-5305
+            </a>
+            <a href="sms:+18643195305" class="btn-text-on-dark inline-flex items-center gap-2 rounded-lg px-5 py-3 text-base font-semibold min-h-[44px]">
+              <i data-lucide="message-square" class="w-4 h-4"></i>
+              Text us
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Services (3 cards) -->
-    <section id="services" class="py-16 sm:py-20 lg:py-24 bg-white">
+    <!-- Services strip -->
+    <section id="services" class="py-14 sm:py-16 border-b border-linen">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="max-w-2xl mb-10 sm:mb-12 fade-in">
-          <p class="text-xs font-semibold uppercase tracking-wider text-accent mb-2">Services</p>
-          <h2 class="text-3xl sm:text-4xl font-bold tracking-tight text-navy-900 mb-3">
-            Plumbing for homes and workplaces
-          </h2>
-          <p class="text-navy-700/70 leading-relaxed">
-            Clear communication, fair prices, and satisfaction-backed work for Greenville-area customers.
-          </p>
+        <div class="mb-8 sm:mb-10">
+          <p class="text-xs font-semibold uppercase tracking-wider text-pine mb-2">Services</p>
+          <h2 class="text-2xl sm:text-3xl font-display font-bold text-forest">What Greenville calls us for</h2>
         </div>
-
-        <div class="grid md:grid-cols-3 gap-5 sm:gap-6">
-          <article class="group fade-in rounded-2xl border border-ice-100 bg-ice-50/50 overflow-hidden shadow-card hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300">
-            <div class="aspect-[16/10] overflow-hidden bg-navy-900/5">
-              <img
-                src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
-                alt="Residential plumbing work in a home"
-                class="img-lock transition-transform duration-500 group-hover:scale-105"
-                width="800"
-                height="500"
-                loading="lazy"
-              />
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+          <article class="card-demo rounded-xl border border-linen bg-white p-6 flex flex-col">
+            <div class="w-10 h-10 rounded-lg bg-go/10 text-go flex items-center justify-center mb-4">
+              <i data-lucide="droplets" class="w-5 h-5"></i>
             </div>
-            <div class="p-6">
-              <div class="flex items-center gap-2.5 mb-3">
-                <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-navy-900 text-sky-300">
-                  <i data-lucide="home" style="width:18px;height:18px;"></i>
-                </span>
-                <h3 class="text-lg font-bold text-navy-900">Home Plumbing</h3>
-              </div>
-              <p class="text-sm text-navy-700/70 leading-relaxed mb-4">
-                Everyday plumbing fixes and upgrades for Greenville-area homes — clear communication until the job is done.
-              </p>
-              <a href="tel:+18643195305" class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:text-accent-hover transition-colors">
-                Call for service
-                <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+            <h3 class="font-display font-semibold text-lg mb-2">Drain Cleaning</h3>
+            <p class="text-sm text-moss leading-relaxed mb-5 flex-1">Clogs and slow drains. Call or text for help.</p>
+            <div class="flex flex-col gap-2">
+              <a href="tel:+18643195305" class="btn-call inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold min-h-[44px] w-full">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                Call
               </a>
+              <a href="sms:+18643195305" class="btn-text inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold min-h-[44px] w-full">
+                <i data-lucide="message-square" class="w-4 h-4"></i>
+                Text
+              </a>
+              <a href="drain-cleaning.html" class="text-center text-sm font-semibold text-pine hover:text-go transition-colors pt-1">Learn more</a>
             </div>
           </article>
 
-          <article class="group fade-in rounded-2xl border border-ice-100 bg-ice-50/50 overflow-hidden shadow-card hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300" style="transition-delay: 60ms;">
-            <div class="aspect-[16/10] overflow-hidden bg-navy-900/5">
-              <img
-                src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
-                alt="Light commercial plumbing for offices and workplaces"
-                class="img-lock transition-transform duration-500 group-hover:scale-105"
-                width="800"
-                height="500"
-                loading="lazy"
-              />
+          <article class="card-demo rounded-xl border border-linen bg-white p-6 flex flex-col">
+            <div class="w-10 h-10 rounded-lg bg-pine/10 text-pine flex items-center justify-center mb-4">
+              <i data-lucide="flame" class="w-5 h-5"></i>
             </div>
-            <div class="p-6">
-              <div class="flex items-center gap-2.5 mb-3">
-                <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-navy-900 text-sky-300">
-                  <i data-lucide="building-2" style="width:18px;height:18px;"></i>
-                </span>
-                <h3 class="text-lg font-bold text-navy-900">Office &amp; Light Commercial</h3>
-              </div>
-              <p class="text-sm text-navy-700/70 leading-relaxed mb-4">
-                Plumbing for offices and workplaces that need dependable work at prices that won’t break the bank.
-              </p>
-              <a href="tel:+18643195305" class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:text-accent-hover transition-colors">
-                Call for service
-                <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+            <h3 class="font-display font-semibold text-lg mb-2">Water Heaters</h3>
+            <p class="text-sm text-moss leading-relaxed mb-5 flex-1">Repair or replace. Free estimates so you know the plan.</p>
+            <div class="flex flex-col gap-2">
+              <a href="tel:+18643195305" class="btn-call inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold min-h-[44px] w-full">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                Call
               </a>
+              <a href="sms:+18643195305" class="btn-text inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold min-h-[44px] w-full">
+                <i data-lucide="message-square" class="w-4 h-4"></i>
+                Text
+              </a>
+              <a href="water-heaters.html" class="text-center text-sm font-semibold text-pine hover:text-go transition-colors pt-1">Learn more</a>
             </div>
           </article>
 
-          <article class="group fade-in rounded-2xl border border-ice-100 bg-ice-50/50 overflow-hidden shadow-card hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300" style="transition-delay: 120ms;">
-            <div class="aspect-[16/10] overflow-hidden bg-navy-900/5">
-              <img
-                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
-                alt="Free plumbing estimate consultation"
-                class="img-lock transition-transform duration-500 group-hover:scale-105"
-                width="800"
-                height="500"
-                loading="lazy"
-              />
+          <article class="card-demo rounded-xl border border-linen bg-white p-6 flex flex-col">
+            <div class="w-10 h-10 rounded-lg bg-go/10 text-go flex items-center justify-center mb-4">
+              <i data-lucide="alert-circle" class="w-5 h-5"></i>
             </div>
-            <div class="p-6">
-              <div class="flex items-center gap-2.5 mb-3">
-                <span class="flex items-center justify-center w-9 h-9 rounded-lg bg-navy-900 text-sky-300">
-                  <i data-lucide="clipboard-check" style="width:18px;height:18px;"></i>
-                </span>
-                <h3 class="text-lg font-bold text-navy-900">Free Estimates</h3>
-              </div>
-              <p class="text-sm text-navy-700/70 leading-relaxed mb-4">
-                Call or text with your issue. Hufflin’s quotes free so you can decide before work starts.
-              </p>
-              <a href="sms:+18643195305" class="inline-flex items-center gap-1.5 text-sm font-semibold text-accent hover:text-accent-hover transition-colors">
-                Text for a free estimate
-                <i data-lucide="arrow-right" style="width:14px;height:14px;"></i>
+            <h3 class="font-display font-semibold text-lg mb-2">Leak Repair</h3>
+            <p class="text-sm text-moss leading-relaxed mb-5 flex-1">Fixture and pipe leaks that won't wait.</p>
+            <div class="flex flex-col gap-2">
+              <a href="tel:+18643195305" class="btn-call inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold min-h-[44px] w-full">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                Call
               </a>
+              <a href="sms:+18643195305" class="btn-text inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold min-h-[44px] w-full">
+                <i data-lucide="message-square" class="w-4 h-4"></i>
+                Text
+              </a>
+              <a href="leak-repair.html" class="text-center text-sm font-semibold text-pine hover:text-go transition-colors pt-1">Learn more</a>
+            </div>
+          </article>
+
+          <article class="card-demo rounded-xl border border-linen bg-white p-6 flex flex-col">
+            <div class="w-10 h-10 rounded-lg bg-pine/10 text-pine flex items-center justify-center mb-4">
+              <i data-lucide="home" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-display font-semibold text-lg mb-2">Home &amp; Office Plumbing</h3>
+            <p class="text-sm text-moss leading-relaxed mb-5 flex-1">Everyday plumbing for Greenville homes and workplaces.</p>
+            <div class="flex flex-col gap-2">
+              <a href="tel:+18643195305" class="btn-call inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold min-h-[44px] w-full">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                Call
+              </a>
+              <a href="sms:+18643195305" class="btn-text inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold min-h-[44px] w-full">
+                <i data-lucide="message-square" class="w-4 h-4"></i>
+                Text
+              </a>
+              <a href="#estimate" class="btn-ghost inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold min-h-[44px] w-full">Get estimate</a>
+              <a href="plumbing-services.html" class="text-center text-sm font-semibold text-pine hover:text-go transition-colors pt-1">Learn more</a>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <!-- Why Us / Trust block -->
-    <section id="why-us" class="py-16 sm:py-20 lg:py-24 bg-navy-900 text-white relative overflow-hidden">
-      <div class="absolute inset-0 opacity-[0.07]" style="background-image: radial-gradient(circle at 20% 30%, #1d6fb8 0%, transparent 45%), radial-gradient(circle at 80% 70%, #1d6fb8 0%, transparent 40%);"></div>
-      <div class="relative max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
-          <div class="lg:col-span-5 fade-in">
-            <div class="aspect-[4/5] rounded-2xl overflow-hidden ring-1 ring-white/10 shadow-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&amp;fit=crop&amp;w=900&amp;q=80"
-                alt="Professional plumber working on residential pipes"
-                class="img-lock"
-                width="900"
-                height="1125"
-                loading="lazy"
-              />
-            </div>
-          </div>
-          <div class="lg:col-span-7 fade-in" style="transition-delay: 80ms;">
-            <p class="text-xs font-semibold uppercase tracking-wider text-sky-300 mb-3">Local plumbing you can call today</p>
-            <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-5">
-              Straightforward plumbing for Greenville homes and offices
-            </h2>
-            <p class="text-white/75 leading-relaxed mb-8 max-w-xl">
-              When a pipe, fixture, or water issue won’t wait, you want a local plumber who answers, prices fairly, and finishes the job. Hufflin’s Plumbing keeps it straightforward for Greenville homes and offices.
+    <!-- Trust / family block -->
+    <section id="trust" class="py-14 sm:py-16 bg-white border-b border-linen">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wider text-pine mb-2">Why Greenville calls Hufflin's</p>
+            <h2 class="text-2xl sm:text-3xl font-display font-bold text-forest mb-4">A family shop that answers and finishes</h2>
+            <p class="text-moss leading-relaxed mb-6">
+              When a pipe, drain, or water heater acts up, you want a local plumber who answers, prices fairly, and finishes the job. Hufflin's keeps it straightforward for Greenville homes and offices.
             </p>
+            <div class="inline-flex items-center gap-2 rounded-full border border-leaf/40 bg-leaf/10 px-4 py-2 mb-6">
+              <i data-lucide="badge-check" class="w-5 h-5 text-leaf"></i>
+              <span class="font-display font-semibold text-sm text-leaf">Satisfaction guarantee</span>
+            </div>
             <ul class="space-y-3">
-              <li class="flex gap-3 items-start">
-                <span class="mt-0.5 flex items-center justify-center w-8 h-8 rounded-lg bg-white/10 text-sky-300 shrink-0">
-                  <i data-lucide="check" style="width:16px;height:16px;"></i>
-                </span>
-                <span class="font-medium text-white/95 pt-1">Serving South Carolina customers for over 10 years</span>
+              <li class="flex items-start gap-3 text-sm sm:text-base text-forest">
+                <i data-lucide="check" class="w-5 h-5 text-pine shrink-0 mt-0.5"></i>
+                <span>Joseph D. Hufflin, owner</span>
               </li>
-              <li class="flex gap-3 items-start">
-                <span class="mt-0.5 flex items-center justify-center w-8 h-8 rounded-lg bg-white/10 text-sky-300 shrink-0">
-                  <i data-lucide="check" style="width:16px;height:16px;"></i>
-                </span>
-                <span class="font-medium text-white/95 pt-1">Home or office plumbing</span>
+              <li class="flex items-start gap-3 text-sm sm:text-base text-forest">
+                <i data-lucide="check" class="w-5 h-5 text-pine shrink-0 mt-0.5"></i>
+                <span>Family shop passed down by his grandfather</span>
               </li>
-              <li class="flex gap-3 items-start">
-                <span class="mt-0.5 flex items-center justify-center w-8 h-8 rounded-lg bg-white/10 text-sky-300 shrink-0">
-                  <i data-lucide="check" style="width:16px;height:16px;"></i>
-                </span>
-                <span class="font-medium text-white/95 pt-1">Satisfaction guarantee (per site)</span>
+              <li class="flex items-start gap-3 text-sm sm:text-base text-forest">
+                <i data-lucide="check" class="w-5 h-5 text-pine shrink-0 mt-0.5"></i>
+                <span>Over 10 years of professional plumbing in South Carolina</span>
               </li>
-              <li class="flex gap-3 items-start">
-                <span class="mt-0.5 flex items-center justify-center w-8 h-8 rounded-lg bg-white/10 text-sky-300 shrink-0">
-                  <i data-lucide="check" style="width:16px;height:16px;"></i>
-                </span>
-                <span class="font-medium text-white/95 pt-1">Free estimates — call or text</span>
+              <li class="flex items-start gap-3 text-sm sm:text-base text-forest">
+                <i data-lucide="check" class="w-5 h-5 text-pine shrink-0 mt-0.5"></i>
+                <span>Home and office plumbing</span>
               </li>
-              <li class="flex gap-3 items-start">
-                <span class="mt-0.5 flex items-center justify-center w-8 h-8 rounded-lg bg-white/10 text-sky-300 shrink-0">
-                  <i data-lucide="check" style="width:16px;height:16px;"></i>
-                </span>
-                <span class="font-medium text-white/95 pt-1">Greenville: 402 C Curtis Rd, Greenville, SC 29611</span>
+              <li class="flex items-start gap-3 text-sm sm:text-base text-forest">
+                <i data-lucide="check" class="w-5 h-5 text-pine shrink-0 mt-0.5"></i>
+                <span>Affordable solutions</span>
               </li>
-              <li class="flex gap-3 items-start">
-                <span class="mt-0.5 flex items-center justify-center w-8 h-8 rounded-lg bg-white/10 text-sky-300 shrink-0">
-                  <i data-lucide="check" style="width:16px;height:16px;"></i>
-                </span>
-                <span class="font-medium text-white/95 pt-1">Stays in communication until the job is done</span>
+              <li class="flex items-start gap-3 text-sm sm:text-base text-forest">
+                <i data-lucide="check" class="w-5 h-5 text-pine shrink-0 mt-0.5"></i>
+                <span>Satisfaction guarantee</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm sm:text-base text-forest">
+                <i data-lucide="check" class="w-5 h-5 text-pine shrink-0 mt-0.5"></i>
+                <span>Free estimates (call or text)</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm sm:text-base text-forest">
+                <i data-lucide="check" class="w-5 h-5 text-pine shrink-0 mt-0.5"></i>
+                <span>Clear communication until the job is done</span>
+              </li>
+              <li class="flex items-start gap-3 text-sm sm:text-base text-forest">
+                <i data-lucide="check" class="w-5 h-5 text-pine shrink-0 mt-0.5"></i>
+                <span>Greenville address: 402 C Curtis Rd, Greenville, SC 29611</span>
               </li>
             </ul>
           </div>
-        </div>
-
-        <!-- Optional SAMPLE proof strip -->
-        <div class="mt-12 pt-10 border-t border-white/10 fade-in">
-          <p class="text-[10px] font-bold uppercase tracking-widest text-amber-300/90 mb-4">[SAMPLE] Layout placeholders only — not real reviews</p>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div class="rounded-xl bg-white/5 border border-dashed border-white/20 px-5 py-4">
-              <p class="text-xs font-semibold text-amber-300/80 mb-2">[SAMPLE]</p>
-              <p class="text-white/80 italic text-sm leading-relaxed">“Showed up, explained the work, got it done.”</p>
-              <p class="mt-2 text-xs text-white/45">— Greenville customer <span class="text-amber-300/70">(sample)</span></p>
+          <div class="space-y-5">
+            <div class="min-h-[200px] rounded-xl overflow-hidden relative bg-cream border border-linen">
+              <img src="assets/lQVam4j.jpg" alt="Plumber working on drain pipes with a wrench" class="w-full h-full min-h-[220px] object-cover" width="800" height="500" />
             </div>
-            <div class="rounded-xl bg-white/5 border border-dashed border-white/20 px-5 py-4">
-              <p class="text-xs font-semibold text-amber-300/80 mb-2">[SAMPLE]</p>
-              <p class="text-white/80 text-sm leading-relaxed">★★★★★ Local reviews placeholder</p>
-              <p class="mt-2 text-xs text-white/45"><span class="text-amber-300/70">(sample — not real ratings)</span></p>
+            <div class="grid grid-cols-2 gap-3">
+              <img src="assets/73O3l6l.jpg" alt="Under-sink plumbing repair in a Greenville home kitchen" class="rounded-xl border border-linen object-cover w-full h-32 sm:h-36" width="400" height="160" />
+              <img src="assets/naaaqNw.jpg" alt="Copper plumbing pipes" class="rounded-xl border border-linen object-cover w-full h-32 sm:h-36" width="400" height="160" />
+            </div>
+            <!-- SAMPLE proof only -->
+            <div class="rounded-xl border border-dashed border-linen bg-cream p-5">
+              <p class="text-[11px] font-semibold uppercase tracking-wider text-moss mb-3">SAMPLE · Placeholder proof (not real reviews)</p>
+              <blockquote class="text-sm text-forest leading-relaxed mb-2">
+                "Showed up, explained the work, got it done."
+              </blockquote>
+              <p class="text-xs text-moss">Greenville customer, sample</p>
+              <p class="text-xs text-moss mt-3">[SAMPLE] Local reviews placeholder (sample, not real ratings)</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Mid-page CTA band -->
-    <section id="quote" class="py-16 sm:py-20 bg-ice-50">
+    <!-- How it works -->
+    <section class="py-14 sm:py-16 border-b border-linen">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
-        <div class="fade-in relative overflow-hidden rounded-3xl bg-gradient-to-br from-navy-800 to-navy-950 text-white px-6 py-12 sm:px-12 sm:py-14 shadow-card">
-          <div class="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
-          <div class="relative grid lg:grid-cols-12 gap-8 items-center">
-            <div class="lg:col-span-7">
-              <h2 class="text-3xl sm:text-4xl font-bold tracking-tight mb-4">
-                Call or text for a free plumbing estimate
-              </h2>
-              <p class="text-white/75 leading-relaxed max-w-lg">
-                Tell us what’s going on. We’ll quote it — no pressure.
-              </p>
+        <div class="mb-8 sm:mb-10 text-center max-w-2xl mx-auto">
+          <p class="text-xs font-semibold uppercase tracking-wider text-pine mb-2">How it works</p>
+          <h2 class="text-2xl sm:text-3xl font-display font-bold text-forest">Three clear steps</h2>
+        </div>
+        <div class="grid md:grid-cols-3 gap-6">
+          <div class="rounded-xl border border-linen bg-white p-6 text-center">
+            <div class="w-12 h-12 rounded-full bg-go/10 text-go flex items-center justify-center mx-auto mb-4 font-display font-bold text-lg">1</div>
+            <h3 class="font-display font-semibold text-lg mb-2">Call or text</h3>
+            <p class="text-sm text-moss leading-relaxed">(864) 319-5305 and tell us what's going on.</p>
+          </div>
+          <div class="rounded-xl border border-linen bg-white p-6 text-center">
+            <div class="w-12 h-12 rounded-full bg-pine/10 text-pine flex items-center justify-center mx-auto mb-4 font-display font-bold text-lg">2</div>
+            <h3 class="font-display font-semibold text-lg mb-2">We quote</h3>
+            <p class="text-sm text-moss leading-relaxed">A free estimate when you need one.</p>
+          </div>
+          <div class="rounded-xl border border-linen bg-white p-6 text-center">
+            <div class="w-12 h-12 rounded-full bg-leaf/10 text-leaf flex items-center justify-center mx-auto mb-4 font-display font-bold text-lg">3</div>
+            <h3 class="font-display font-semibold text-lg mb-2">We finish</h3>
+            <p class="text-sm text-moss leading-relaxed">And stay in touch until the job is done.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Guarantee band -->
+    <section class="bg-cream border-b border-linen">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-12 sm:py-14">
+        <div class="rounded-xl border border-leaf/30 bg-white p-8 sm:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+          <div class="max-w-xl">
+            <div class="inline-flex items-center gap-2 rounded-full border border-leaf/40 bg-leaf/10 px-4 py-2 mb-4">
+              <i data-lucide="badge-check" class="w-5 h-5 text-leaf"></i>
+              <span class="font-display font-semibold text-sm text-leaf">Satisfaction guarantee</span>
             </div>
-            <div class="lg:col-span-5 flex flex-col sm:items-end gap-3">
-              <a href="tel:+18643195305"
-                 class="inline-flex w-full sm:w-auto items-center justify-center gap-2 rounded-full bg-accent hover:bg-accent-hover text-white font-semibold px-7 py-4 shadow-cta transition-all hover:scale-[1.02]">
-                <i data-lucide="phone" style="width:18px;height:18px;"></i>
-                Call (864) 319-5305
+            <h2 class="text-2xl sm:text-3xl font-display font-bold text-forest mb-3">Satisfaction guaranteed.</h2>
+            <p class="text-moss leading-relaxed">Affordable plumbing backed by a satisfaction guarantee. Ask us what that means for your job when you call or text.</p>
+          </div>
+          <div class="flex flex-wrap gap-3 shrink-0">
+            <a href="tel:+18643195305" class="btn-call inline-flex items-center gap-2 rounded-lg px-5 py-3 text-base font-semibold min-h-[44px]">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+              Call (864) 319-5305
+            </a>
+            <a href="sms:+18643195305" class="btn-text inline-flex items-center gap-2 rounded-lg px-5 py-3 text-base font-semibold min-h-[44px]">
+              <i data-lucide="message-square" class="w-4 h-4"></i>
+              Text us
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mid-page CTA + estimate form -->
+    <section id="estimate" class="py-14 sm:py-16 bg-white border-b border-linen">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="grid lg:grid-cols-2 gap-10 lg:gap-14 items-start">
+          <div>
+            <h2 class="text-2xl sm:text-3xl font-display font-bold text-forest mb-3">Prefer to talk it through?</h2>
+            <p class="text-moss leading-relaxed mb-6">Urgent: call or text now. Planning ahead: request a free estimate.</p>
+            <div class="flex flex-wrap gap-3 mb-8">
+              <a href="tel:+18643195305" class="btn-call inline-flex items-center gap-2 rounded-lg px-5 py-3 text-base font-semibold min-h-[44px]">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                Call
               </a>
-              <a href="sms:+18643195305" class="text-sm font-medium text-white/70 hover:text-white transition-colors text-center sm:text-right">
-                Text for a Free Estimate
+              <a href="sms:+18643195305" class="btn-text inline-flex items-center gap-2 rounded-lg px-5 py-3 text-base font-semibold min-h-[44px]">
+                <i data-lucide="message-square" class="w-4 h-4"></i>
+                Text
               </a>
             </div>
+            <div class="rounded-xl border border-linen bg-cream p-5">
+              <p class="text-sm font-semibold text-forest mb-1">Service area</p>
+              <p class="text-sm text-moss leading-relaxed">Greenville, SC and honest surrounding communities. <a href="service-area.html" class="text-go font-semibold hover:underline underline-offset-2">See service area</a></p>
+            </div>
+          </div>
+          <div class="rounded-xl border border-linen bg-cream p-6 sm:p-8">
+            <h3 class="font-display font-semibold text-xl mb-1">Request a free estimate</h3>
+            <p class="text-sm text-moss mb-6">Home or office plumbing. We will call or text you back.</p>
+            <form class="space-y-4" onsubmit="return false;">
+              <div>
+                <label class="block text-sm font-semibold mb-1.5" for="name">Name</label>
+                <input id="name" type="text" class="field w-full rounded-lg px-3 py-2.5 text-base" placeholder="Your name" autocomplete="name" />
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-1.5" for="phone">Phone</label>
+                <input id="phone" type="tel" class="field w-full rounded-lg px-3 py-2.5 text-base" placeholder="(864) 555-0100" autocomplete="tel" />
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-1.5" for="email">Email</label>
+                <input id="email" type="email" class="field w-full rounded-lg px-3 py-2.5 text-base" placeholder="you@example.com" autocomplete="email" />
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-1.5" for="service">Service needed</label>
+                <select id="service" class="field w-full rounded-lg px-3 py-2.5 text-base">
+                  <option>Drain cleaning</option>
+                  <option>Water heater</option>
+                  <option>Leak repair</option>
+                  <option>Home plumbing</option>
+                  <option>Office plumbing</option>
+                  <option>Free estimate / not sure</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-sm font-semibold mb-1.5" for="notes">Notes (optional)</label>
+                <textarea id="notes" rows="3" class="field w-full rounded-lg px-3 py-2.5 text-base resize-y" placeholder="Leak, clog, fixture, preferred time"></textarea>
+              </div>
+              <button type="submit" class="btn-call w-full rounded-lg px-5 py-3 text-base font-semibold min-h-[44px]">
+                Send estimate request
+              </button>
+              <p class="text-xs text-moss text-center">Prefer to talk now? <a href="tel:+18643195305" class="text-go font-semibold hover:text-go-dark underline-offset-2 hover:underline">Call (864) 319-5305</a> or <a href="sms:+18643195305" class="text-go font-semibold hover:text-go-dark underline-offset-2 hover:underline">Text us</a></p>
+            </form>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Final close -->
-    <section class="py-14 sm:py-16 bg-white border-t border-ice-100">
-      <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center fade-in">
-        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-navy-900 mb-6">
-          Affordable plumbing. Satisfaction-backed work.
-        </h2>
-        <a href="tel:+18643195305"
-           class="inline-flex items-center justify-center gap-2 rounded-full bg-accent hover:bg-accent-hover text-white font-semibold px-7 py-4 shadow-cta transition-all hover:scale-[1.02]">
-          <i data-lucide="phone" style="width:18px;height:18px;"></i>
-          Call or text Hufflin’s — (864) 319-5305
-        </a>
+    <section class="bg-pine text-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 py-14 sm:py-16 text-center">
+        <h2 class="text-2xl sm:text-3xl lg:text-4xl font-display font-bold leading-tight mb-6 max-w-2xl mx-auto">Affordable Greenville plumbing. Family shop. Real answers.</h2>
+        <div class="flex flex-wrap justify-center gap-3">
+          <a href="tel:+18643195305" class="btn-call inline-flex items-center gap-2 rounded-lg px-5 py-3 text-base font-semibold min-h-[44px]">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            Call Hufflin's, (864) 319-5305
+          </a>
+          <a href="sms:+18643195305" class="btn-text-on-dark inline-flex items-center gap-2 rounded-lg px-5 py-3 text-base font-semibold min-h-[44px]">
+            <i data-lucide="message-square" class="w-4 h-4"></i>
+            Text us
+          </a>
+        </div>
       </div>
     </section>
+
   </main>
 
   <!-- Footer -->
-  <footer class="bg-ice-50 border-t border-ice-100">
+  <footer class="bg-white border-t border-linen">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-12">
-      <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-8">
-        <div>
-          <div class="flex items-center gap-2.5 mb-3">
-            <span class="flex items-center justify-center w-8 h-8 rounded-lg bg-navy-900 text-sky-300">
-              <i data-lucide="wrench" style="width:16px;height:16px;"></i>
-            </span>
-            <span class="font-bold text-navy-900">Hufflin’s Plumbing</span>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+        <div class="lg:col-span-1">
+          <p class="font-display font-bold text-lg mb-2">Hufflin's Plumbing</p>
+          <p class="text-sm text-moss leading-relaxed mb-4">
+            402 C Curtis Rd<br />
+            Greenville, SC 29611
+          </p>
+          <div class="flex flex-col gap-2">
+            <a href="tel:+18643195305" class="inline-flex items-center gap-2 text-go font-semibold hover:text-go-dark transition-colors tabular-nums">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+              (864) 319-5305
+            </a>
+            <a href="sms:+18643195305" class="inline-flex items-center gap-2 text-go font-semibold hover:text-go-dark transition-colors">
+              <i data-lucide="message-square" class="w-4 h-4"></i>
+              Text us
+            </a>
           </div>
-          <p class="text-sm text-navy-700/65 max-w-xs leading-relaxed">
-            Professional plumbing for Greenville homes and offices. Over 10 years serving South Carolina. Free estimates — call or text.
-          </p>
-          <p class="mt-3 text-sm text-navy-700/55">402 C Curtis Rd, Greenville, SC 29611</p>
         </div>
-        <div class="sm:text-right">
-          <p class="text-xs font-semibold uppercase tracking-wider text-navy-700/50 mb-2">Call or text today</p>
-          <a href="tel:+18643195305" class="inline-flex items-center gap-2 text-xl font-bold text-navy-900 hover:text-accent transition-colors">
-            <i data-lucide="phone" style="width:20px;height:20px;" class="text-accent"></i>
-            (864) 319-5305
-          </a>
-          <p class="mt-2 text-sm text-navy-700/55">
-            <a href="sms:+18643195305" class="hover:text-accent transition-colors">Text for a Free Estimate</a>
-          </p>
+        <div>
+          <p class="font-display font-semibold text-sm mb-3">Services</p>
+          <ul class="space-y-2 text-sm text-moss">
+            <li><a href="drain-cleaning.html" class="hover:text-forest transition-colors">Drain Cleaning</a></li>
+            <li><a href="water-heaters.html" class="hover:text-forest transition-colors">Water Heaters</a></li>
+            <li><a href="leak-repair.html" class="hover:text-forest transition-colors">Leak Repair</a></li>
+            <li><a href="plumbing-services.html" class="hover:text-forest transition-colors">Home &amp; Office Plumbing</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-display font-semibold text-sm mb-3">Company</p>
+          <ul class="space-y-2 text-sm text-moss">
+            <li><a href="about.html" class="hover:text-forest transition-colors">About</a></li>
+            <li><a href="service-area.html" class="hover:text-forest transition-colors">Service Area</a></li>
+            <li><a href="contact.html" class="hover:text-forest transition-colors">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="font-display font-semibold text-sm mb-3">Get help</p>
+          <div class="flex flex-col gap-2">
+            <a href="tel:+18643195305" class="btn-call inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold min-h-[44px]">
+              <i data-lucide="phone" class="w-4 h-4"></i>
+              Call now
+            </a>
+            <a href="sms:+18643195305" class="btn-text inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold min-h-[44px]">
+              <i data-lucide="message-square" class="w-4 h-4"></i>
+              Text us
+            </a>
+          </div>
+          <p class="text-xs text-moss mt-3">Satisfaction guarantee (public site wording).</p>
         </div>
       </div>
-      <div class="mt-10 pt-6 border-t border-ice-200 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 text-xs text-navy-700/45">
-        <p>&copy; <span id="year"></span> Hufflin’s Plumbing. Greenville, SC.</p>
-        <p>Sales sample by Melton Studios — not the live site.</p>
+      <div class="border-t border-linen pt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+        <p class="text-xs text-moss leading-relaxed">
+          Hufflin's Plumbing · 402 C Curtis Rd, Greenville, SC 29611 · (864) 319-5305
+        </p>
+        <p class="text-xs text-moss">SAMPLE Melton Launch · Not live production</p>
       </div>
     </div>
   </footer>
 
-  <!-- Mobile sticky call bar -->
-  <div class="fixed bottom-0 inset-x-0 z-50 sm:hidden p-3 bg-gradient-to-t from-white via-white to-transparent pointer-events-none">
-    <div class="pointer-events-auto flex gap-2">
-      <a href="tel:+18643195305"
-         class="flex flex-1 items-center justify-center gap-2 rounded-full bg-accent hover:bg-accent-hover text-white font-semibold py-3.5 shadow-cta">
-        <i data-lucide="phone" style="width:18px;height:18px;"></i>
-        Call
-      </a>
-      <a href="sms:+18643195305"
-         class="flex flex-1 items-center justify-center gap-2 rounded-full bg-navy-900 hover:bg-navy-800 text-white font-semibold py-3.5 shadow-card">
-        <i data-lucide="message-square" style="width:18px;height:18px;"></i>
-        Text
-      </a>
-    </div>
+  <!-- Fixed sticky dual Call + Text bar -->
+  <div class="sticky-dual grid grid-cols-2 shadow-[0_-4px_16px_rgba(20,53,42,0.12)]">
+    <a href="tel:+18643195305" class="btn-call flex items-center justify-center gap-2 w-full px-3 py-3.5 text-sm sm:text-base font-semibold font-display tracking-wide border-r border-white/20 min-h-[56px]">
+      <i data-lucide="phone" class="w-5 h-5"></i>
+      <span class="tabular-nums">Call (864) 319-5305</span>
+    </a>
+    <a href="sms:+18643195305" class="btn-call flex items-center justify-center gap-2 w-full px-3 py-3.5 text-sm sm:text-base font-semibold font-display tracking-wide min-h-[56px]">
+      <i data-lucide="message-square" class="w-5 h-5"></i>
+      Text us
+    </a>
   </div>
-  <div class="h-20 sm:hidden" aria-hidden="true"></div>
 
   <script>
     lucide.createIcons();
-    document.getElementById('year').textContent = new Date().getFullYear();
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
+    (function () {
+      var btn = document.getElementById('mobile-menu-btn');
+      var menu = document.getElementById('mobile-menu');
+      if (!btn || !menu) return;
+      btn.addEventListener('click', function () {
+        var open = menu.classList.toggle('hidden') === false;
+        menu.hidden = !open;
+        btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+        btn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
       });
-    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.fade-in').forEach((el) => observer.observe(el));
+    })();
   </script>
 </body>
 </html>
